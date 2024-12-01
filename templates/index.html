@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit Recognition</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Digit Recognition Web App</h1>
+    <p>Draw a digit (0-9) in the box below:</p>
+    <canvas id="canvas" width="280" height="280"></canvas><br>
+    <button onclick="clearCanvas()">Clear</button>
+    <button onclick="predictDigit()">Predict</button>
+
+    <h2>Prediction Result:</h2>
+    <p id="prediction">-</p>
+
+    <h2>Provide Feedback (if incorrect):</h2>
+    <input type="number" id="correctDigit" min="0" max="9" placeholder="Correct digit">
+    <button onclick="sendFeedback()">Submit Feedback</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
